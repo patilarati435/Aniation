@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .top{
+        color: aqua;
+        margin-left: 420px;
+        margin-top: 550px;
+        position: absolute;
+        text-transform: uppercase;
+        font-size: 40px;
+        text-decoration: underline;
+        }
+        .top2{
+              margin-left: 200px;
+             }
+        body{
+            align-items: center;
+            justify-content: center;
+            background-color: tomato;
+            /* position: relative; */
+        }
+        
+        .main{
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin-left: 300px;
+            /* display: flex; */
+            transform-style:preserve-3d ;
+            animation: example 25s  linear infinite ;
+            
+        }
+        .main span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* margin-left: 0;
+            margin-top: 0; */
+            width: 100%;
+            transform-origin: center;
+            transform-style: preserve-3d;
+            transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px) ;
+            -webkit-box-reflect: below 0 linear-gradient(transparent,transparent,#0004); 
+        }
+        .main span img{
+            border-radius: 10px;
+           
+            position: relative;
+            margin-top: 100px;
+            margin-left: 50 px;
+            object-fit: cover;
+            /* transform-style: preserve-3d ; */
+
+           
+        }
+        img:hover{
+            width: 350px;
+            height: 280px;
+            border: 5px double white;
+            border-radius: 5px;
+        }
+        
+        @keyframes example{
+            0% { transform: perspective(1000px) rotateY(0deg) ; }
+        100%   { transform: perspective(1000px) rotateY(360deg) ;  }
+        }
+        .div{
+            margin-left: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+    <div class="top"><h1>Dog family</h1></div>
+    <div class="top2">
+    <div class="main" >
+        <span class="box"style="--i: 1"> <img src="th (2)dog1.jpg" alt=""width="280"height="250"></span> 
+        <span class="box"style="--i: 2"><img src="th (2)dog2.jpg" alt=""width="280"height="250"></span>
+        <span class="box"style="--i: 3"><img src="th (2)dog3.jpg"alt=""width="280"height="250"></span>
+        <span class="box"style="--i: 4"><img src="th (2)dog4.jpg" alt=""width="280"height="250"></span>
+        <span class="box"style="--i: 5"><img src="th (2)dog5.jpg" alt=""width="280"height="250"></span>
+        <span class="box"style="--i: 6"><img src="th (2)dog6.jpg "alt=""width="280"height="250"></span>
+        <span class="box"style="--i: 7"><img src="th (2)dog5.jpg" alt=""width="280"height="250"></span>
+        <span class="box"style="--i: 8"><img src="th (2)dog2.jpg" alt=""width="280"height="250"></span>
+    </div>
+</div>
+</div>
+</body>
+</html>
